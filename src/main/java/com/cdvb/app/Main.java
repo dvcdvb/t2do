@@ -1,17 +1,14 @@
 package com.cdvb.app;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Welcome to:");
-        System.out.println("  _______ ____  ______  _____ ");
-        System.out.println(" |__   __|__  ||  __  |/ __  |");
-        System.out.println("    | |     ) /| |  | | |  | |");
-        System.out.println("    | |    / / | |  | | |  | |");
-        System.out.println("    | |   / /_ | |__| | |__| |");
-        System.out.println("    |_|  |____||_____/|_____/ ");
+        ArrayList<Double> numbers = new ArrayList<Double>();
+
+        System.out.println("--- Welcome to: T2DO ---");
 
         Scanner myObj = new Scanner(System.in);
         System.out.println("Enter Title of your To-Do");
