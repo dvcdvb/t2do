@@ -6,24 +6,41 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Double> numbers = new ArrayList<Double>();
+        ArrayList<Task> todoList = new ArrayList<>();
 
         System.out.println("--- Welcome to: T2DO ---");
 
-        Scanner myObj = new Scanner(System.in);
-        System.out.println("Enter Title of your To-Do");
+        String title = "";
+        String description = "";
+        int priority = 0;
 
-        String Title = myObj.nextLine();
+        do {
+            Scanner myObj = new Scanner(System.in);
+            System.out.println("Enter Title of your To-Do");
+            title = myObj.nextLine();
+            if (title.equals("exit")) {
+                break;
+            }
 
-        System.out.println("Enter Description");
-        String Description = myObj.nextLine();
+            System.out.println("Enter Description");
+            description = myObj.nextLine();
+            if (description.equals("exit")) {
+                break;
+            }
 
-        System.out.println("Enter Priority (1-3)");
-        int Priority = myObj.nextInt();
+            System.out.println("Enter Priority (1-3)");
+            priority = myObj.nextInt();
 
-        System.out.println("------T2DO------");
-        System.out.println("[ ]" + " " + Priority + " " + "//" + " " + Title + " " + "//" + " " + Description);
-        System.out.println("------T2DO------");
+            Task newTask = new Task(title, description, priority);
+            todoList.add(newTask);
+
+            for (Task t : todoList) {
+                t.printTask();
+            }
+
+        } while (!title.equals("exit"));
+
+        ;
 
     }
 }
