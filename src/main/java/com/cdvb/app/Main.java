@@ -8,7 +8,7 @@ public class Main {
 
         ArrayList<Task> todoList = new ArrayList<>();
 
-        System.out.println("--- Welcome to T2DO ---");
+        System.out.println("--- Welcome to t2do ---");
 
         String title = "";
         String description = "";
