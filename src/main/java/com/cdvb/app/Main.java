@@ -8,7 +8,8 @@ public class Main {
 
         ArrayList<Task> todoList = new ArrayList<>();
 
-        System.out.println("--- Welcome to t2do ---");
+        System.out.println("Welcome to t2do");
+        System.out.println("---------------");
 
         String title = "";
         String description = "";
@@ -16,7 +17,7 @@ public class Main {
 
         do {
             Scanner myObj = new Scanner(System.in);
-            System.out.println("Enter Title of your To-Do");
+            System.out.println("Enter Title of your To-Do:");
             title = myObj.nextLine();
             if (title.equals("exit")) {
                 break;
